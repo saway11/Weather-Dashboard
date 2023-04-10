@@ -8,17 +8,23 @@
     <link rel="stylesheet" href="./assets/style.css">
     <title>Weather Dahsboard</title>
 </head>
-<body>
-    <!-- Navbar will include title-->
-    <nav class="navbar has-text-white is-dark" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <div class="navbar-menu">
-                <a class="navbar-item">
-                    Weather Dashboard
-                </a>
+<!-- Body will include header. When the title is clicked the user will be able to
+refresh the page-->
+<body class="is-dark">
+    <section class="hero is-link is-small has-background-black">
+        <div class="hero-body">
+            <h1 class="title" onclick="location.reload()">
+                Weather Dashboard
+            </h1>
+        </div>
+    </section>
+    <div class="introColumns is-mobile is-centered" id="introColumns">
+        <div class="columns">
+            <div class="column forecast" id="startScreen">
             </div>
         </div>
-    </nav>
-    </nav>
+
+    </div>
 </body>
+
 </html> 
