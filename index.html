@@ -1,35 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-    <link rel="stylesheet" href="./assets/style.css">
-    <title>Weather Dahsboard</title>
-</head>
-<!-- Body will include header. When the title is clicked the user will be able to
-refresh the page-->
-<body>
-    <nav class="navbar navbar-dark is-dark">
-        <span class="navbar-brand mb-0  has-text-center">
-            Weather Dashboard
-        </span>
-    </nav>
-    <div class="container">
-        <div class="row">
-            <p class="control has-icon-centered">
-                <input class="input" type="search" id="inputField" placeholder="Enter city name">
-            </p>
-            <div class="control">
-                <a class="is-responsive is-danger" id="myButton">
-                    Search
-                </a>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <link rel="stylesheet" href="./assets/style.css">
+        <title>Weather Dahsboard</title>
+    </head>
+        <!-- Body will include header. When the title is clicked the user will be able to
+        refresh the page-->
+    <body>
+        <nav class="navbar navbar-bg is-dark" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <div class="navbar-item ml-auto">
+                    <a href="index.html" class="home-button">
+                        Weather Dashboard
+                    </a>
+                </div>
             </div>
-            <button class="btn btn-primary mb-3" type="button" id="clear-history">clear-history</button>
-            <form id="history"></form>
+        </nav>
+        <div class="column">
+            <div class="column">
+                <h1 class="title is-3">Search for a City:</h1>
+            </div>
+            <div class="column">
+                <div class="button">
+                    <p class="control has-icon-centered">
+                        <input class="input" type="search" id="inputField" placeholder="Sacramento">
+                    </p>
+                </div>
+                <div class="control">
+                    <a class="button is-responsive is-info" id="myButton">
+                        Search
+                    </a>
+                </div>
+              
+            </div>
+            <div class="column">
+              Third column
+            </div>
+            <div class="column">
+              Fourth column
+            </div>
+          </div>
         </div>
-    </div>
-</body>
+    </body>
 
 </html
