@@ -10,21 +10,26 @@
 </head>
 <!-- Body will include header. When the title is clicked the user will be able to
 refresh the page-->
-<body class="is-dark">
-    <section class="hero is-link is-small has-background-black">
-        <div class="hero-body">
-            <h1 class="title" onclick="location.reload()">
-                Weather Dashboard
-            </h1>
-        </div>
-    </section>
-    <div class="introColumns is-mobile is-centered" id="introColumns">
-        <div class="columns">
-            <div class="column forecast" id="startScreen">
+<body>
+    <nav class="navbar navbar-dark is-dark">
+        <span class="navbar-brand mb-0  has-text-center">
+            Weather Dashboard
+        </span>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <p class="control has-icon-centered">
+                <input class="input" type="search" id="inputField" placeholder="Enter city name">
+            </p>
+            <div class="control">
+                <a class="is-responsive is-danger" id="myButton">
+                    Search
+                </a>
             </div>
+            <button class="btn btn-primary mb-3" type="button" id="clear-history">clear-history</button>
+            <form id="history"></form>
         </div>
-
     </div>
 </body>
 
-</html> 
+</html
