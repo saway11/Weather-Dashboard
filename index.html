@@ -5,80 +5,56 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-        <link rel="stylesheet" href="./assets/style.css">
+        <link rel="stylesheet" href="./assets/css/style.css">
         <title>Weather Dahsboard</title>
     </head>
-        <!-- Body will include header. When the title is clicked the user will be able to
-        refresh the page-->
     <body>
-        <nav class="navbar navbar-bg is-dark" role="navigation" aria-label="main navigation">
-            <div class="navbar-brand">
-                <div class="navbar-item ml-auto">
-                    <a href="index.html" class="home-button">
-                        Weather Dashboard
-                    </a>
+        <header class="topPage">Weather Dashboard</header>
+        <!-- Page Contents -->
+        <div class="container is-fluid">
+            <div class="columns m-auto">
+                <!-- First Column -->
+                <div id="search-column" class="column is-one-quarter p-auto is-size-4 has-text-weight-medium has-text-left">Search for a City:
+                  <!-- Search input here -->
+                  <input id="cityName" class="input is-medium" type="text" placeholder="City Name">
+                  <button id="btnSearch" class="button my-2 is-info is-fullwidth" type="submit">Search</button>
+                  <hr class="my-1">
+                  <div id="storedBtns"></div>
+                </div>
+                <!-- Second Column -->
+                <div id="current-weather" class="column">
+                  <!-- content here -->
                 </div>
             </div>
-        </nav>
-        <div class="column">
+        </div>
+        <div class="columns">
             <div class="column">
-                <h1 class="title is-3">Search for a City:</h1>
+              <p class="bd-notification is-info">5-Day Forecast</p>
             </div>
-            <div class="column is-2">
-                    <p class="control has-icon-centered">
-                        <input class="input" type="search" id="inputField" placeholder="Sacramento">
-                    </p>
-                <div class="control">
-                    <a class="button is-responsive is-info" id="myButton">
-                        Search
-                    </a>
+              <div class="columns is-mobile">
+                <div class="column">
+                  <p class="bd-notification is-info">First nested column</p>
                 </div>
-              
-            </div>
-            <div class="column">
-                <div class="control">
-                    <a class="button is-responsive is-info" id="myButton">
-                        Orlando
-                    </a>
-                </div>
-            </div>
-            <div class="column">
-                <div class="control">
-                    <a class="button is-responsive is-info" id="myButton">
-                        Chicago
-                    </a>
-                </div>
-            </div>
-            <div class="column">
-                <div class="control">
-                    <a class="button is-responsive is-info" id="myButton">
-                        Denver
-                    </a>
+                <div class="column">
+                  <p class="bd-notification is-info">Second nested column</p>
                 </div>
               </div>
-              <div class="column">
-                <div class="control">
-                    <a class="button is-responsive is-info" id="myButton">
-                        Seattle
-                    </a>
+            </div>
+            <div class="column">
+              <p class="bd-notification is-danger">Second column</p>
+              <div class="columns is-mobile">
+                <div class="column is-half">
+                  <p class="bd-notification is-danger">50%</p>
                 </div>
-              </div>
-              <div class="column">
-                <div class="control">
-                    <a class="button is-responsive is-info" id="myButton">
-                        San Francisco
-                    </a>
+                <div class="column">
+                  <p class="bd-notification is-danger">Auto</p>
                 </div>
-              </div>
-              <div class="column">
-                <div class="control">
-                    <a class="button is-responsive is-info" id="myButton">
-                        New York
-                    </a>
+                <div class="column">
+                  <p class="bd-notification is-danger">Auto</p>
                 </div>
               </div>
           </div>
-        </div>
+        <!-- Load JavaScript -->
+        <script src="./Assets/js/script.js"></script>
     </body>
-
 </html
