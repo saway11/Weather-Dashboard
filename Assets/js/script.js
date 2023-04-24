@@ -106,4 +106,15 @@ var displayCurrentData = function(city, data) {
 
 var displayForecastData = function(data) {
     console.log(data)
+    //input header and clear data - header is outside main forecast container
+    forecastContainerEl.textContent = "";
+    var forecastHeaderEl = document.getElementById("five-day");
+    forecastHeaderEl.textContent = "5-day Forecast:"
+
+    //for loop for five day forecast
+    for (var i=1; i < 6; i++) {
+        var tempForecast = Math.round(data.daily[i].temp.day);
+        var humidityForecast = data.daily[i].humidity;
+        var iconForecast = data.daily[i].weather[0].icon;
+    }
 }
