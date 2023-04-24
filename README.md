@@ -1,5 +1,6 @@
 # Weather-Dashboard
 # URL
+https://saway11.github.io/Weather-Dashboard/
 
 # Description
 Created a website where the user can see the weather
@@ -14,10 +15,16 @@ conditions, temperature, the wind speed and humidity from
 a city of your choice.
 
 # Screenshot
-
+![](./Assets/images/Screenshot%20(17).png)
+![](./Assets/images/Screenshot%20(18).png)
+![](./Assets/images/Screenshot%20(19).png)
+![](./Assets/images/Screenshot%20(20).png)
+![](./Assets/images/Screenshot%20(21).png)
 # Credits
 UC Berkeley Coding Bootcamp
-Bulma CSS
+Bootstrap
+Google
+ChatGBT
 
 # Licence
 
