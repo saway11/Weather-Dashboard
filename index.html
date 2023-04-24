@@ -4,57 +4,34 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
         <link rel="stylesheet" href="./assets/css/style.css">
         <title>Weather Dahsboard</title>
     </head>
     <body>
-        <header class="topPage">Weather Dashboard</header>
-        <!-- Page Contents -->
-        <div class="container is-fluid">
-            <div class="columns m-auto">
-                <!-- First Column -->
-                <div id="search-column" class="column is-one-quarter p-auto is-size-4 has-text-weight-medium has-text-left">Search for a City:
-                  <!-- Search input here -->
-                  <input id="cityName" class="input is-medium" type="text" placeholder="City Name">
-                  <button id="btnSearch" class="button my-2 is-info is-fullwidth" type="submit">Search</button>
-                  <hr class="my-1">
-                  <div id="storedBtns"></div>
-                </div>
-                <!-- Second Column -->
-                <div id="current-weather" class="column">
-                  <!-- content here -->
-                </div>
+      <!--Header/Navbar-->
+      <nav class="navbar-light bg-secondary text-center">
+        <span class="navbar-brand mb-0 w-100 h1 text-white">Weather Dashboard</span>
+      </nav>
+
+      <!--main container for page-->
+      <div class="container=fluid no-gutters">
+
+        <p class="search-instruction my-1"> Search for a city: </p>
+        <!--input section-->
+        <form id="city-form">
+          <div class="input-group">
+            <input id="city-input" type="text" class="form-control" placeholder="Enter city name" aria-label="Enter city name">
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="submit" id="search-button">
+                <i class="fas fa-search"></i>
+              </button>
             </div>
-        </div>
-        <div class="columns">
-            <div class="column">
-              <p class="bd-notification is-info">5-Day Forecast</p>
-            </div>
-              <div class="columns is-mobile">
-                <div class="column">
-                  <p class="bd-notification is-info">First nested column</p>
-                </div>
-                <div class="column">
-                  <p class="bd-notification is-info">Second nested column</p>
-                </div>
-              </div>
-            </div>
-            <div class="column">
-              <p class="bd-notification is-danger">Second column</p>
-              <div class="columns is-mobile">
-                <div class="column is-half">
-                  <p class="bd-notification is-danger">50%</p>
-                </div>
-                <div class="column">
-                  <p class="bd-notification is-danger">Auto</p>
-                </div>
-                <div class="column">
-                  <p class="bd-notification is-danger">Auto</p>
-                </div>
-              </div>
           </div>
-        <!-- Load JavaScript -->
-        <script src="./Assets/js/script.js"></script>
+        </form>
+        <!-- End input section-->
+      </div>        
     </body>
 </html
