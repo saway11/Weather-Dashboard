@@ -116,5 +116,56 @@ var displayForecastData = function(data) {
         var tempForecast = Math.round(data.daily[i].temp.day);
         var humidityForecast = data.daily[i].humidity;
         var iconForecast = data.daily[i].weather[0].icon;
+
+
+        // create card elements and data elements for weather data
+        var cardEl = document.createElement("div");
+        cardEl.setAttribute("class", "card col-xl-2 col-md-5 col-sm-10 mx-3 my-2 bg-primary text-white text-center");
+
+        var cardBodyEl = document.createElement("div");
+        cardBodyEl.setAttribute("class", "card-body");
+
+        var cardDateEl = document.createElement("h6");
+        cardDateEl.textContent = moment().add(i, 'days').format("L");
+
+        var cardIconEl = document.createElement("img");
+        cardDataEl.setAttribute("src", "https://openweathermap.org/img/wn/" + iconForecast + "@2x.png")
+
+        var cardTempEl = document.createElement ("p");
+        cardTempEl.setAttribute("class", "card-text");
+        cardHumidEl.textContent = "Humidity: " + humidityForecast + "%";
+
+        //append children to card body
+        cardBodyEl.appendChild(cardDateEl)
+        cardBodyEl.appendChild(cardIconEl)
+        cardBodyEl.appendChild(cardTempEl)
+        cardBodyEl.appendChild(cardHumidEl)
+
+        //append body to card and then container element
+        cardEl.appendChild(cardBodyEl);
+        forecastContainerEl.appendChild(cardEl);
+
+        //reset form after data displays
+        cityFormEl.requestFullscreen()
     }
+
+};
+
+var getCityData = function(city) {
+    event.preventDefault();
+
+    // current conditions in user-enetered city//using it to get long and latitude for One call weather API url
+    var cityInfoUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + APIkey;
+
+    //make a request to the url
+    fetch(cityInfoUrl).then(function(response) {
+        //if response is okay, no errors found
+        if (response.ok) {
+            response.json().then(function(data) {
+                console.log(data);
+
+            })
+        }
+    })
+    
 }
